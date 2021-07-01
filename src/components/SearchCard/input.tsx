@@ -51,7 +51,7 @@ const SearchInput = () => {
         const result = response.data
         setSuggestions(result.places)
       } catch (err) {
-        console.log('deu error')
+        console.log('deu error') //
       }
     }
 
