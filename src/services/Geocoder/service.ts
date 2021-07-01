@@ -25,6 +25,7 @@ export default class Geocoder {
   )
 
   static search = async (query: string, options: SearchOptions): Promise<Array<HitProps>> => {
+    console.log('o iper acessado era: ' + options.ip);
     const result: any = await Geocoder.placesClient.transporter.read(
       {
         method: 'POST',
