@@ -14,6 +14,8 @@ export default validate({ body: schema }, async (req: NextApiRequest, res: NextA
     return
   }
 
+  console.log(ip)
+
   const result = await Geocoder.search(data.query, {
     ip: ip as string,
     language: data.language
