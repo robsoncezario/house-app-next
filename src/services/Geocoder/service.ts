@@ -24,6 +24,30 @@ export default class Geocoder {
     }
   )
 
+  static getCurrentLocationFromIp = async (ip: string, language: string): Promise<HitProps | null> => {
+    const result: any = await Geocoder.placesClient.transporter.read(
+      {
+        method: 'POST',
+        path: '1/places/query',
+        data: {
+          type: 'city',
+          hitsPerPage: 1,
+          language: language ?? 'en',
+          aroundLatLngViaIP: true
+        },
+        cacheable: true
+      },
+
+      {
+        cacheable: true,
+        headers: {
+          'X-Forwarded-For': ip
+        }
+      })
+
+    return (result.hits && result.hits[0]) ? mapHit(result.hits[0]) : null
+  }
+
   static search = async (query: string, options: SearchOptions): Promise<Array<HitProps>> => {
     const result: any = await Geocoder.placesClient.transporter.read(
       {

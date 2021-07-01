@@ -12,6 +12,7 @@
     "room_one": "{{count}} Quarto",
     "room_other": "{{count}} Quartos",
     "my_current_location": "Minha localização atual",
+    "location_not_found": "Localização não encontrada",
     "search_title": "Que tipo de propriedade você está procurando?",
     "search_placeholder": "Pesquisar por rua, bairro, cidade ou estado",
     "how_many_rooms": "Com quantos quartos?",

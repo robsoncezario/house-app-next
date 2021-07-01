@@ -22,6 +22,7 @@ const SearchInput = () => {
   const [focused, setFocused] = useState(false)
   const [suggestions, setSuggestions] = useState([])
   const debouncedValue = useDebounce(value, 500)
+  const [asyncRequesting, setAsyncRequesting] = useState(false)
   const { locale } = useRouter()
   const { t } = useTranslation()
 
@@ -81,8 +82,36 @@ const SearchInput = () => {
       .join(', '))
   }
 
-  const requestCurrentLocation = () => {
-    return 1
+  const requestCurrentLocation = async () => {
+    if (!asyncRequesting) {
+      setAsyncRequesting(true)
+
+      try {
+        const response = await axios.post('/api/geocoder/getCurrentLocation', {
+          data: {
+            language: locale.split('-')[0]
+          }
+        })
+        const { location } = response.data
+
+        if (location !== null) {
+          setValue([
+            location.name,
+            location.city,
+            location.administrative,
+            location.country
+          ].filter((token) => token !== undefined)
+            .map(a => a.replaceAll('<em>', '').replaceAll('</em>', ''))
+            .join(', '))
+        } else {
+          setValue(t('common:location_not_found'))
+        }
+      } catch (err) {
+        setValue(t('common:location_not_found'))
+      } finally {
+        setAsyncRequesting(false)
+      }
+    }
   }
 
   return (

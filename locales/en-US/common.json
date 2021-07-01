@@ -12,6 +12,7 @@
     "room_one": "{{count}} Room",
     "room_other": "{{count}} Rooms",
     "my_current_location": "My current location",
+    "location_not_found": "Location not found",
     "search_title": "What type of place are you looking for?",
     "search_placeholder": "Search for street, neighborhood, city or state",
     "how_many_rooms": "How many rooms?",
