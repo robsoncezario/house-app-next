@@ -45,8 +45,7 @@ const SearchInput = () => {
         const response = await axios.post('/api/geocoder/search', {
           data: {
             query: debouncedValue,
-            language: locale.split('-')[0],
-            nicaraguar: 'zikaraguar'
+            language: locale.split('-')[0]
           }
         })
         const result = response.data
