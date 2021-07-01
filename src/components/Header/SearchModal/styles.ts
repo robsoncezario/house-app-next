@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 600px;
@@ -6,4 +6,4 @@ export const Container = styled.div`
     border-radius: 4px;
     background-color: ${props => props.theme.palette.background.default};
     box-shadow: ${props => (props.theme.palette as any).shadow.main} 0px 0px 12px 0px;
-`;
+`

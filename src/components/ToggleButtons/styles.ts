@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import styled from 'styled-components'
+import { fade } from '@material-ui/core/styles/colorManipulator'
 import {
-    ItemProps
-} from './types';
+  ItemProps
+} from './types'
 
 export const Container = styled.div`
     display: flex;
@@ -13,7 +13,7 @@ export const Container = styled.div`
     padding-right: 4px;
     box-shadow: ${props => fade((props.theme.palette as any).shadow.main, 0.2)} 0px -1px 12px 0px;
     border-radius: 100px;
-`;
+`
 
 export const Item = styled.div<ItemProps>`
     display: flex;
@@ -36,4 +36,4 @@ export const Item = styled.div<ItemProps>`
         background-color: ${props => fade(props.theme.palette.primary.main, 0.1)};
         color: ${props => props.theme.palette.text.primary};
     }
-`;
+`

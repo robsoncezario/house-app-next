@@ -1,63 +1,63 @@
-import {useState} from 'react';
-import { 
-    Tooltip,
-    ListItem,
-    ListItemText
-} from '@material-ui/core';
-import useTranslation from 'next-translate/useTranslation';
-
-import Logo from '../Logo';
-import Navbar from '../Navbar';
-import SearchModal from './SearchModal';
+import React, { useState } from 'react'
 import {
-    Container,
-    Row,
-    Button,
-    StyledIconButton,
-    StyledDrawer
-} from './styles';
+  Tooltip,
+  ListItem,
+  ListItemText
+} from '@material-ui/core'
+import useTranslation from 'next-translate/useTranslation'
 
-const Header = () => {
-    const {t} = useTranslation();
-    const [open, setOpen] = useState(false);
+import Logo from '../Logo'
+import Navbar from '../Navbar'
+import SearchModal from './SearchModal'
+import {
+  Container,
+  Row,
+  Button,
+  StyledIconButton,
+  StyledDrawer
+} from './styles'
 
-    const handleDrawer = () => {
-        setOpen(true);
-    }
+const Header: React.FC = () => {
+  const { t } = useTranslation()
+  const [open, setOpen] = useState(false)
 
-    const handleDrawerClose = () => {
-        setOpen(false);
-    }
+  const handleDrawer = () => {
+    setOpen(true)
+  }
 
-    return (
-        <>
-            <Container>
-                <Row>
-                    <Logo />
-                    <Navbar />
-                </Row>
+  const handleDrawerClose = () => {
+    setOpen(false)
+  }
 
-                <Row>
-                    <Button>{t('common:advertise')}</Button>
-                    <SearchModal />
+  return (
+    <>
+      <Container>
+        <Row>
+          <Logo />
+          <Navbar />
+        </Row>
 
-                    <Tooltip title={t('common:login')}>
-                        <StyledIconButton onClick={handleDrawer}>
-                            <i className='fad fa-user' />
-                        </StyledIconButton>
-                    </Tooltip>
-                </Row>
-            </Container>
+        <Row>
+          <Button>{t('common:advertise')}</Button>
+          <SearchModal />
 
-            <StyledDrawer anchor={'right'} open={open} onClose={handleDrawerClose}>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </StyledDrawer>
-        </>
-    )
+          <Tooltip title={t('common:login')}>
+            <StyledIconButton onClick={handleDrawer}>
+              <i className='fad fa-user' />
+            </StyledIconButton>
+          </Tooltip>
+        </Row>
+      </Container>
+
+      <StyledDrawer anchor={'right'} open={open} onClose={handleDrawerClose}>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </StyledDrawer>
+    </>
+  )
 }
 
-export default Header;
+export default Header

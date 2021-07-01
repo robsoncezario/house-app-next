@@ -1,24 +1,23 @@
-import { PlacesActions } from './types';
+import { PlacesActions } from './types'
 
 export interface PlacesProps {
-    query?: string;
-    hits?: Array<string>;
+  query?: string
+  hits?: Array<string>
 }
 
-const initialState : PlacesProps = {
-    query: ''
-};
+const initialState: PlacesProps = {
+  query: ''
+}
 
 const placesReducer = (state = initialState, action: any) => {
-    switch(action.type) {
-      case PlacesActions.SetQuery:
-        return {
-            ...state, query: 
-            action.payload
-        };
-      default:
-        return state;
-    }
+  switch (action.type) {
+    case PlacesActions.SetQuery:
+      return {
+        ...state, query: action.payload
+      }
+    default:
+      return state
   }
-  
-  export default placesReducer;
+}
+
+export default placesReducer

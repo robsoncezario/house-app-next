@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface ModalProps {
-    open?: boolean;
+  open?: boolean
 }
 
 export const Overlay = styled.div<ModalProps>`
@@ -17,7 +17,7 @@ export const Overlay = styled.div<ModalProps>`
     background: ${props => props.open ? 'rgba(10, 10, 10, 0.3)' : 'transparent'};
     pointer-events: ${props => props.open ? 'all' : 'none'};
     transition: background .3s;
-`;
+`
 
 export const Wrapper = styled.div<ModalProps>`
     display: flex;
@@ -30,4 +30,4 @@ export const Wrapper = styled.div<ModalProps>`
     opacity: ${props => props.open ? 1 : 0};
     transform: ${props => props.open ? 'none' : 'translateY(3em)'};
     pointer-events: ${props => props.open ? 'all' : 'none'};
-`;
+`

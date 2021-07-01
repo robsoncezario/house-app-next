@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import styled from 'styled-components'
+import { fade } from '@material-ui/core/styles/colorManipulator'
 
 export const Container = styled.div`
     position: relative;
@@ -32,7 +32,7 @@ export const Container = styled.div`
     &:focus-within input {
         box-shadow: ${props => props.theme.palette.primary.main} 0px -1px 12px 0px;
     }
-`;
+`
 
 export const Input = styled.input`
     width: 100%; 
@@ -66,7 +66,7 @@ export const Input = styled.input`
     &::selection {
         background-color: ${props => fade(props.theme.palette.primary.main, 0.2)};
     }
-`;
+`
 
 interface AutocompleteProps {
     visible?: boolean;
@@ -79,7 +79,7 @@ export const Autocomplete = styled.div<AutocompleteProps>`
     left: 0;
     z-index: 20;
     display: ${props => props.visible ? 'flex' : 'none'};
-`;
+`
 
 export const AutocompleteContainer = styled.div`
     width: 100%; 
@@ -90,7 +90,7 @@ export const AutocompleteContainer = styled.div`
     background: ${props => props.theme.palette.background.default};
     box-shadow: ${props => fade((props.theme.palette as any).shadow.main, 0.2)} 0px -1px 12px 0px;
     border-radius: 6px;
-`;
+`
 
 export const Suggestion = styled.div`
     width: 100%;
@@ -136,4 +136,4 @@ export const Suggestion = styled.div`
         margin-left: 5px;
         color: ${props => props.theme.palette.text.hint};
     }
-`;
+`

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import styled from 'styled-components'
+import { fade } from '@material-ui/core/styles/colorManipulator'
 
 export const Container = styled.div`
     display: flex;
@@ -9,7 +9,7 @@ export const Container = styled.div`
     @media(max-width: 768px) {
         display: none;
     }
-`;
+`
 
 interface ItemProps {
     isCurrent?: boolean;
@@ -35,4 +35,4 @@ export const Item = styled.div<ItemProps>`
     &:hover {
         background-color: ${props => fade(props.theme.palette.primary.main, 0.1)};
     }
-`;
+`

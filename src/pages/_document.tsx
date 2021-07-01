@@ -16,26 +16,26 @@ export default class MyDocument extends Document {
   ): Promise<DocumentInitialProps> {
     const styledComponentsSheet = new ServerStyleSheet()
     const materialSheets = new ServerStyleSheets()
-    const originalRenderPage = ctx.renderPage;
+    const originalRenderPage = ctx.renderPage
 
     try {
-        ctx.renderPage = () => originalRenderPage({
-            enhanceApp: App => props => styledComponentsSheet.collectStyles(materialSheets.collect(<App {...props} />))
-          })
-        const initialProps = await Document.getInitialProps(ctx)
-        return {
-          ...initialProps,
-          styles: (
-            <React.Fragment>
-              {initialProps.styles}
-              {materialSheets.getStyleElement()}
-              {styledComponentsSheet.getStyleElement()}
-            </React.Fragment>
-          )
-        }
-      } finally {
-        styledComponentsSheet.seal()
+      ctx.renderPage = () => originalRenderPage({
+        enhanceApp: App => props => styledComponentsSheet.collectStyles(materialSheets.collect(<App {...props} />))
+      })
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: (
+          <React.Fragment>
+            {initialProps.styles}
+            {materialSheets.getStyleElement()}
+            {styledComponentsSheet.getStyleElement()}
+          </React.Fragment>
+        )
       }
+    } finally {
+      styledComponentsSheet.seal()
+    }
   }
 
   render(): JSX.Element {
@@ -49,10 +49,10 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link 
-            rel="stylesheet" 
-            href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" 
-            integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" 
+          <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH"
             crossOrigin="anonymous" />
 
           <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />

@@ -1,3 +1,3 @@
 export enum PlacesActions {
-    SetQuery = '@places/setQuery'
+  SetQuery = '@places/setQuery'
 }

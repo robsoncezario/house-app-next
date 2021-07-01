@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import styled from 'styled-components'
+import { fade } from '@material-ui/core/styles/colorManipulator'
 
 export const Container = styled.div`
     display: flex;
@@ -14,14 +14,14 @@ export const Container = styled.div`
     border-radius: 4px;
     background-color: ${props => props.theme.palette.background.default};
     box-shadow: ${props => (props.theme.palette as any).shadow.main} 0px 0px 12px 0px;
-`;
+`
 
 export const Title = styled.div`
     font-size: 16px;
     font-weight: bold;
     padding-bottom: 20px;
     align-self: flex-start;
-`;
+`
 
 export const RoomsContainer = styled.div`
     width: 100%;
@@ -49,7 +49,7 @@ export const RoomsContainer = styled.div`
         width: 1px;
         background-color: ${props => fade(props.theme.palette.text.primary, 0.2)};
     }
-`;
+`
 
 export const Button = styled.div`
     width: 100%;
@@ -78,4 +78,4 @@ export const Button = styled.div`
     &:hover {
         opacity: .8;
     }
-`;
+`

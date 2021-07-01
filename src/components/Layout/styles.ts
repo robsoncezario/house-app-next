@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100vw;
@@ -6,4 +6,4 @@ export const Container = styled.div`
   justify-content: flex-start;
   flex: 1 1 auto;
   padding-top: 70px;
-`;
+`

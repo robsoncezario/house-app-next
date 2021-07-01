@@ -1,13 +1,14 @@
-import { 
-    Container
-  } from '../styles/pages/Nearby'
+import React from 'react'
+import {
+  Container
+} from '../styles/pages/Nearby'
 
 const Nearby: React.FC = () => {
-    return (
-      <Container>
-          
-      </Container>
-    )
-  }
-  
-  export default Nearby
+  return (
+    <Container>
+
+    </Container>
+  )
+}
+
+export default Nearby

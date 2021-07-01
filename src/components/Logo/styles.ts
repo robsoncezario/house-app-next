@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Row = styled.div`
     display: flex;
@@ -7,12 +7,12 @@ export const Row = styled.div`
     cursor: pointer;
     -webkit-user-select: none;
     -webkit-user-drag: none;
-`;
+`
 
 export const Icon = styled.i`
     font-size: 25px;
     color: ${props => props.theme.palette.primary.main};
-`;
+`
 
 export const Name = styled.div`
     font-size: 20px;
@@ -23,4 +23,4 @@ export const Name = styled.div`
     @media(max-width: 768px) {
         display: none;
     }
-`;
+`

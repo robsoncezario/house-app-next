@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import {
-    Drawer,
-    IconButton
- } from '@material-ui/core';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+  Drawer,
+  IconButton
+} from '@material-ui/core'
+import { fade } from '@material-ui/core/styles/colorManipulator'
 
 export const Container = styled.div`
     position: fixed;
@@ -25,19 +25,19 @@ export const Container = styled.div`
         padding-left: 20px;
         padding-right: 20px;
     }
-`;
+`
 
 export const Row = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-`;
+`
 
 export const Avatar = styled.img`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-`;
+`
 
 export const StyledIconButton = styled(IconButton)`
     margin-left: 16px;
@@ -54,13 +54,13 @@ export const StyledIconButton = styled(IconButton)`
         font-size: 18px;
         color: ${props => props.theme.palette.primary.main};
     }
-`;
+`
 
 export const StyledDrawer = styled(Drawer)`
     & .MuiDrawer-paper {
         background: ${props => props.theme.palette.background.default};
     }
-`;
+`
 
 export const Button = styled.div`
     height: 36px;
@@ -81,4 +81,4 @@ export const Button = styled.div`
     &:hover {
         opacity: .8;
     }
-`;
+`

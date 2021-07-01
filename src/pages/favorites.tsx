@@ -1,13 +1,14 @@
-import { 
-    Container
-  } from '../styles/pages/Favorites'
+import React from 'react'
+import {
+  Container
+} from '../styles/pages/Favorites'
 
 const Favorites: React.FC = () => {
-    return (
-      <Container>
+  return (
+    <Container>
 
-      </Container>
-    )
-  }
-  
-  export default Favorites
+    </Container>
+  )
+}
+
+export default Favorites

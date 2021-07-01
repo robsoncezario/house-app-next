@@ -4,7 +4,7 @@ export interface InputNumberProps {
     min?: number;
     step?: number;
     defaultValue?: number;
-    onChange?: Function;
+    onChange?: (index: number) => void;
 }
 
 export interface CircleButtonProps {

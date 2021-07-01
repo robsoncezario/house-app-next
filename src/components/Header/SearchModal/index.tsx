@@ -1,40 +1,40 @@
-import {useState} from 'react';
-import useTranslation from 'next-translate/useTranslation';
-import { Tooltip } from '@material-ui/core';
-import TransitionModal from '../../TransitionModal';
+import React, { useState } from 'react'
+import useTranslation from 'next-translate/useTranslation'
+import { Tooltip } from '@material-ui/core'
+import TransitionModal from '../../TransitionModal'
 
-import {StyledIconButton} from '../styles';
+import { StyledIconButton } from '../styles'
 import {
-    Container
-} from './styles';
+  Container
+} from './styles'
 
-const SearchModal = () => {
-    const {t} = useTranslation();
-    const [open, setOpen] = useState(false);
-    
-    const handleSearch = () => {
-        setOpen(true);
-    }
+const SearchModal: React.FC = () => {
+  const { t } = useTranslation()
+  const [open, setOpen] = useState(false)
 
-    const handleClose = () => {
-        setOpen(false);
-    }
+  const handleSearch = () => {
+    setOpen(true)
+  }
 
-    return (
-        <>
-            <Tooltip title={t('common:search')}>
-                <StyledIconButton onClick={handleSearch}>
-                    <i className='fad fa-search' />
-                </StyledIconButton>
-            </Tooltip>
+  const handleClose = () => {
+    setOpen(false)
+  }
 
-            <TransitionModal open={open} onClose={handleClose}>
-                <Container>
+  return (
+    <>
+      <Tooltip title={t('common:search')}>
+        <StyledIconButton onClick={handleSearch}>
+          <i className='fad fa-search' />
+        </StyledIconButton>
+      </Tooltip>
 
-                </Container>
-            </TransitionModal>
-        </>
-    )
+      <TransitionModal open={open} onClose={handleClose}>
+        <Container>
+
+        </Container>
+      </TransitionModal>
+    </>
+  )
 }
 
-export default SearchModal;
+export default SearchModal

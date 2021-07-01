@@ -3,7 +3,7 @@ export interface ToggleButtonsProps {
     suffix?: string;
     data?: Array<string>;
     defaultValue?: number;
-    onChange?: Function;
+    onChange?: (index: number) => void;
 }
 
 export interface ItemProps {

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { BottomNavigation } from '@material-ui/core';
+import styled from 'styled-components'
+import { BottomNavigation } from '@material-ui/core'
 
 export const StyledBottomNavigation = styled(BottomNavigation)`
     position: fixed;
@@ -18,9 +18,9 @@ export const StyledBottomNavigation = styled(BottomNavigation)`
     & .label {
         font-weight: bold !important;
     },
-`;
+`
 
 export const Label = styled.div`
     font-weight: bold;
     font-size: 11px;
-`;
+`
