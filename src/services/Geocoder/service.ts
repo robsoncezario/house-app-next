@@ -30,7 +30,7 @@ export default class Geocoder {
         method: 'POST',
         path: '1/places/query',
         data: {
-          type: 'city',
+          type: 'address',
           hitsPerPage: 1,
           language: language ?? 'en',
           aroundLatLngViaIP: true
