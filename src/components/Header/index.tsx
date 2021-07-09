@@ -12,7 +12,7 @@ import SearchModal from './SearchModal'
 import {
   Container,
   Row,
-  Button,
+  StyledButton,
   StyledIconButton,
   StyledDrawer
 } from './styles'
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         </Row>
 
         <Row>
-          <Button>{t('common:advertise')}</Button>
+          <StyledButton disableElevation><i className='fas fa-newspaper'></i>{t('common:advertise')}</StyledButton>
           <SearchModal />
 
           <Tooltip title={t('common:login')}>

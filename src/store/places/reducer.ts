@@ -1,3 +1,4 @@
+import { HYDRATE } from 'next-redux-wrapper'
 import { PlacesActions } from './types'
 
 export interface PlacesProps {
@@ -11,6 +12,8 @@ const initialState: PlacesProps = {
 
 const placesReducer = (state = initialState, action: any) => {
   switch (action.type) {
+    case HYDRATE:
+      return action.payload.places
     case PlacesActions.SetQuery:
       return {
         ...state, query: action.payload

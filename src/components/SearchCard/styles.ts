@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import {
+  Button
+} from '@material-ui/core'
 import { fade } from '@material-ui/core/styles/colorManipulator'
 
 export const Container = styled.div`
@@ -51,7 +54,7 @@ export const RoomsContainer = styled.div`
     }
 `
 
-export const Button = styled.div`
+export const StyledButton = styled(Button)`
     width: 100%;
     height: 48px;
     display: flex;
@@ -59,7 +62,7 @@ export const Button = styled.div`
     justify-content: center;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 6px;
+    border-radius: 24px;
     font-size: 16px;
     line-height: 16px;
     font-weight: 600;
@@ -69,6 +72,7 @@ export const Button = styled.div`
     -webkit-user-select: none;
     -webkit-user-drag: none;
     margin-top: 20px;
+    text-transform: capitalize;
 
     & i {
         font-size: 14px;
@@ -77,5 +81,6 @@ export const Button = styled.div`
 
     &:hover {
         opacity: .8;
+        background-color: ${props => props.theme.palette.primary.main};
     }
 `

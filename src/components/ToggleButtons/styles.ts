@@ -11,8 +11,6 @@ export const Container = styled.div`
     height: 36px;
     padding-left: 4px;
     padding-right: 4px;
-    box-shadow: ${props => fade((props.theme.palette as any).shadow.main, 0.2)} 0px -1px 12px 0px;
-    border-radius: 100px;
 `
 
 export const Item = styled.div<ItemProps>`
@@ -23,10 +21,10 @@ export const Item = styled.div<ItemProps>`
     padding-left: 14px;
     padding-right: 14px;
     font-size: 14px;
-    font-weight: ${props => props.isSelected ? 'bold' : 500};
+    font-weight: bold;
     background-color: ${props => props.isSelected ? fade(props.theme.palette.primary.main, 0.1) : 'transparent'};
-    color: ${props => props.isSelected ? props.theme.palette.primary.main : props.theme.palette.text.primary};
-    border-radius: 100px;
+    color: ${props => props.isSelected ? props.theme.palette.primary.main : props.theme.palette.text.hint};
+    border-radius: 6px;
     cursor: pointer;
     -webkit-user-select: none;
     -webkit-user-drag: none;

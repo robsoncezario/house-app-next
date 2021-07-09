@@ -1,13 +1,13 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles'
 
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#c0212e',
+      main: '#b9541d'
     },
     secondary: {
-      main: '#19857b',
+      main: '#19857b'
     },
     error: {
       main: '#c0212e'
@@ -28,8 +28,8 @@ const theme = createMuiTheme({
   },
 
   typography: {
-    fontFamily: "'IBM Plex Sans'",
+    fontFamily: "'IBM Plex Sans'"
   }
-});
+})
 
-export default theme;
+export default theme

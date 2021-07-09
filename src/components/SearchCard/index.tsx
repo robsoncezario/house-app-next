@@ -5,7 +5,7 @@ import {
   Container,
   Title,
   RoomsContainer,
-  Button
+  StyledButton
 } from './styles'
 import ToggleButtons from '../ToggleButtons'
 import SearchInput from './input'
@@ -102,7 +102,7 @@ const SearchCard = () => {
         </div>
       </RoomsContainer>
 
-      <Button>{t('common:search')}</Button>
+      <StyledButton>{t('common:search')}</StyledButton>
     </Container>
   )
 }

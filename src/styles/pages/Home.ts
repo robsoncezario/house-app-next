@@ -11,13 +11,13 @@ export const Container = styled.div`
   @media(max-width: 768px) {
     padding-bottom: 56px;
    }
-`;
+`
 
 export const IllustrationContainer = styled.div`
   width: 100%;
   height: auto;
-  min-height: calc(100vh - 70px);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(${illustration}) no-repeat center center fixed;
+  min-height: calc(100vh - 60px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(${illustration}) no-repeat center center fixed;
   background-size: cover, cover;
   overflow: hidden;
   display: flex;
@@ -32,7 +32,7 @@ export const IllustrationContainer = styled.div`
     padding-top: 30px;
     padding-bottom: 30px;
    }
-`;
+`
 
 export const Column = styled.div`
   max-width: 40%;
@@ -45,7 +45,7 @@ export const Column = styled.div`
     width: 90vw;
     max-width: 90vw;
    }
-`;
+`
 
 export const Title = styled.div`
   font-size: 60px;
@@ -59,9 +59,9 @@ export const Title = styled.div`
     line-height: 30px;
     align-self: center;
    }
-`;
+`
 
-export const Description  = styled.div`
+export const Description = styled.div`
   line-height: 20px;
   font-size: 20px;
   font-weight: 400;
@@ -69,12 +69,42 @@ export const Description  = styled.div`
   color: white;
 
   @media(max-width: 768px) {
+    max-width: 70%;
     font-weight: 500;
     margin-top: 15px;
     font-size: 16px;
     line-height: 16px;
     text-align: center;
     align-self: center;
-    margin-bottom: 20px;
    }
-`;
+`
+
+export const Button = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: bold;
+  color: ${props => props.theme.palette.primary.main};
+  cursor: pointer;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+
+  & i {
+    font-size: 17px;
+    line-height: 22px;
+    margin-top: 5px;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+
+  @media(max-width: 768px) {
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: center;
+   }
+`

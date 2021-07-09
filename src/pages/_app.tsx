@@ -7,6 +7,8 @@ import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
 import Layout from '../components/Layout'
 
+import { storeWrapper } from '../store'
+
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <StylesProvider injectFirst>
@@ -23,4 +25,4 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   )
 }
 
-export default App
+export default storeWrapper.withRedux(App)
